@@ -1,13 +1,13 @@
 import os
 from PIL import Image
 
-filename = os.listdir("./Test")   ##Путь к папке для размещения оригинальных изображений
+filename = os.listdir("./Winter")   ##Путь к папке для размещения оригинальных изображений
 
 for obj in filename:
-   past_dir = os.listdir("./Test"+"/"+obj)
-   str_past_dir = "./Test/"+obj
-   folder = os.makedirs("./S/Test/{}".format(obj), exist_ok=True)
-   str_new_dir = "./S/Test/"+obj
+   past_dir = os.listdir("./Winter"+"/"+obj)
+   str_past_dir = "./Winter/"+obj
+   folder = os.makedirs("./TWinter/{}".format(obj), exist_ok=True)
+   str_new_dir = "./TWinter/"+obj
    for image in past_dir:
       im = Image.open(str_past_dir+'/'+image)
       w,h = im.size

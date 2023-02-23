@@ -11,7 +11,7 @@ for obj in filenameTest:
    for image in past_dir:
       im = Image.open(str_past_dir+'/'+image)
       w,h = im.size
-      new_im=im.resize((224,224))
+      new_im=im.resize((160,160))
       new_im.save(str_new_dir+"/"+image)
 
 filenameTraining = os.listdir("./Set_4/Training")   ##Путь к папке для размещения оригинальных изображений
@@ -24,7 +24,7 @@ for obj in filenameTest:
    for image in past_dir:
       im = Image.open(str_past_dir+'/'+image)
       w,h = im.size
-      new_im=im.resize((224,224))
+      new_im=im.resize((160,160))
       new_im.save(str_new_dir+"/"+image)
 
 filenameTraining = os.listdir("./Set_4/Training")   ##Путь к папке для размещения оригинальных изображений
@@ -36,9 +36,9 @@ for obj in filenameTest:
    str_new_dir = "./Set_5/Valid/"+obj
    k=0
    for image in past_dir:
-    if k <= 60:
+    if k <= 300:
       im = Image.open(str_past_dir+'/'+image)
       w,h = im.size
-      new_im=im.resize((224,224))
+      new_im=im.resize((160,160))
       new_im.save(str_new_dir+"/"+image)
       k=k+1

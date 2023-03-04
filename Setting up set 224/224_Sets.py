@@ -32,8 +32,8 @@ filenameLD = os.listdir("./Sets_for_224/Landscape_picture")   ##Путь к па
 for obj in filenameLD:
    past_dir = os.listdir("./Sets_for_224/Landscape_picture"+"/"+obj)
    str_past_dir = "./Sets_for_224/Landscape_picture/"+obj
-   folder = os.makedirs("./224/Set_1LD/{}".format(obj), exist_ok=True)
-   str_new_dir = "./224/Set_1LD/"+obj
+   folder = os.makedirs("./224/Set_1LP/{}".format(obj), exist_ok=True)
+   str_new_dir = "./224/Set_1LP/"+obj
    for image in past_dir:
       im = Image.open(str_past_dir+'/'+image)
       w,h = im.size

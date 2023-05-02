@@ -1,0 +1,9 @@
+elephant
+first_pillar
+fourth_pillar
+lion_rock_gate
+pass
+rock_feathers
+rock_grandfather
+rock_granfmother
+third_pillar

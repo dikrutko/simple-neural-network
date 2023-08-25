@@ -1,0 +1,20 @@
+from PIL import Image
+from pillow_heif import register_heif_opener
+import os
+
+help(register_heif_opener)
+
+register_heif_opener()
+
+# heic_files = [photo for photo in os.listdir() if '.HEIC' in photo]
+
+filename = os.listdir("./set_format/")   ##Путь к папке для размещения оригинальных изображений
+for photo in filename:
+  past_dir = os.listdir("./set_format"+"/"+photo)
+  str_past_dir = "./set_format/"+photo
+  folder = os.makedirs("./set_format/jpg/{}".format(photo), exist_ok=True)
+  str_new_dir = "./set_format/jpg/"+photo
+  for image in past_dir:
+    temp_img = Image.open(str_past_dir+'/'+image)
+    temp_img.convert('RGB')
+    temp_img.save(str_new_dir+"/"+image[:8] + '.jpg')
